@@ -2,17 +2,17 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f0f8; /* soft lavender background */
-  color: #4b3c6b; /* dark lavender text */
+  background-color: #9b59b6; /* darker lavender */
+  color: #ffffff;
 }
 
 a {
-  color: #6a4caf;
+  color: #d1b3ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #9b59b6;
+  color: #ffffff;
 }
 
 /* Navbar */
@@ -21,7 +21,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #b39ddb; /* lavender navbar */
+  background-color: #8e44ad; /* darker lavender */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -33,10 +33,6 @@ nav {
   list-style: none;
 }
 
-.nav-links li a:hover {
-  font-weight: bold;
-}
-
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
@@ -46,13 +42,19 @@ nav {
 section {
   padding: 60px 20px;
   text-align: center;
+  background-color: #9b59b6; /* section color */
 }
 
-/* Home */
+/* Home Section with Background */
 .home-section {
-  background-color: #d1c4e9;
-  padding: 100px 20px;
-  border-bottom: 2px solid #b39ddb;
+  background: linear-gradient(rgba(155,89,182,0.7), rgba(155,89,182,0.7)),
+              url('images/placeholder.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Images & Videos */
@@ -64,20 +66,37 @@ img, video {
 
 .description {
   font-style: italic;
-  color: #6a4caf;
+  color: #d1b3ff;
 }
 
-/* Gallery & Activities */
+/* Activity Section */
 .activity {
   margin: 40px 0;
 }
 
+/* Reports Section */
+#reports ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#reports li {
+  margin: 10px 0;
+  background-color: #8e44ad;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#reports a {
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
-  background-color: #b39ddb;
+  background-color: #8e44ad;
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Responsive */
@@ -91,4 +110,5 @@ footer {
     max-width: 100%;
   }
 }
+
 
