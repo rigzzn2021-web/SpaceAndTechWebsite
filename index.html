@@ -1,85 +1,61 @@
-/* General */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #0a0a23;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Space and Tech</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-a {
-  color: #f0a500;
-  text-decoration: none;
-}
+<header>
+  <h1>Space and Tech</h1>
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('activities')">Activities</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+</header>
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #1a1c4f;
-  position: sticky;
-  top: 0;
-}
+<main>
+  <section id="home" class="active">
+    <h2>Welcome to Space and Tech</h2>
+    <p>This is the place where we share our updates, photos, videos, and research on space and technology.</p>
+  </section>
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
+  <section id="about">
+    <h2>About Space and Tech</h2>
+    <p>We are a passionate group exploring the latest in space exploration and advanced technologies. Our goal is to push the boundaries of knowledge and innovation.</p>
+  </section>
 
-.nav-links li a:hover {
-  color: #ffcc00;
-}
+  <section id="activities">
+    <h2>Activities</h2>
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
+    <div class="media-upload">
+      <h3>Upload Image or Video</h3>
+      <input type="file" id="mediaInput" accept="image/*,video/*" />
+      <button onclick="uploadMedia()">Upload</button>
+    </div>
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
+    <div class="media-container" id="mediaContainer"></div>
 
-/* Home */
-.home-section {
-  background: url('images/stars-background.jpg') no-repeat center center/cover;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    <div class="media-upload">
+      <h3>Upload Report / Research Paper</h3>
+      <textarea id="reportInput" rows="5" placeholder="Paste your research paper or report text here..."></textarea>
+      <button onclick="uploadReport()">Add Report</button>
+    </div>
 
-/* Images */
-img, video {
-  max-width: 80%;
-  border-radius: 10px;
-  margin: 10px 0;
-}
+    <div id="reportsContainer"></div>
+  </section>
 
-/* Gallery Grid */
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach us at <a href="mailto:spaceandtech@example.com">spaceandtech@example.com</a></p>
+  </section>
+</main>
 
-/* Footer */
-footer {
-  background-color: #1a1c4f;
-  padding: 20px;
-  text-align: center;
-}
+<script src="scripts.js"></script>
+</body>
+</html>
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .gallery-grid {
-    flex-direction: column;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
