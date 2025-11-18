@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Space and Tech</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space and Tech Internship</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Space and Tech</h1>
+  <!-- Navbar -->
   <nav>
-    <button onclick="showSection('home')">Home</button>
-    <button onclick="showSection('about')">About</button>
-    <button onclick="showSection('activities')">Activities</button>
-    <button onclick="showSection('contact')">Contact</button>
+    <div class="logo">Space and Tech</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
-</header>
 
-<main>
-  <section id="home" class="active">
-    <h2>Welcome to Space and Tech</h2>
-    <p>This is the place where we share our updates, photos, videos, and research on space and technology.</p>
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <h1>Welcome to Space and Tech</h1>
+    <p>Exploring astronomy and technology through hands-on experiences.</p>
   </section>
 
+  <!-- About Us -->
   <section id="about">
-    <h2>About Space and Tech</h2>
-    <p>We are a passionate group exploring the latest in space exploration and advanced technologies. Our goal is to push the boundaries of knowledge and innovation.</p>
+    <h2>About Us</h2>
+    <p>We are students passionate about space and technology. Our internship included star gazing sessions, video presentations, and research projects.</p>
+    <img src="images/group-photo.jpg" alt="Group Photo" class="about-photo">
   </section>
 
+  <!-- Activities -->
   <section id="activities">
-    <h2>Activities</h2>
+    <h2>Our Activities</h2>
 
-    <div class="media-upload">
-      <h3>Upload Image or Video</h3>
-      <input type="file" id="mediaInput" accept="image/*,video/*" />
-      <button onclick="uploadMedia()">Upload</button>
+    <div class="activity">
+      <h3>Star Gazing Sessions</h3>
+      <p>We observed planets, constellations, and learned to use telescopes effectively.</p>
+      <img src="images/stargazing.jpg" alt="Star Gazing">
+      <p class="description">This was taken during our night observation in school grounds.</p>
     </div>
 
-    <div class="media-container" id="mediaContainer"></div>
-
-    <div class="media-upload">
-      <h3>Upload Report / Research Paper</h3>
-      <textarea id="reportInput" rows="5" placeholder="Paste your research paper or report text here..."></textarea>
-      <button onclick="uploadReport()">Add Report</button>
+    <div class="activity">
+      <h3>Conference Presentation</h3>
+      <p>We presented our video in Australia at an international conference.</p>
+      <video controls>
+        <source src="videos/presentation.mp4" type="video/mp4">
+      </video>
+      <p class="description">Our video explains our star gazing activities and research findings.</p>
     </div>
 
-    <div id="reportsContainer"></div>
+    <!-- Reports and Research Papers -->
+    <div class="activity">
+      <h3>Reports & Research Papers</h3>
+      <p>Here you can upload your reports or research papers.</p>
+      <ul>
+        <li><a href="reports/report1.pdf" target="_blank">Internship Report 1</a></li>
+        <li><a href="reports/research1.pdf" target="_blank">Research Paper 1</a></li>
+      </ul>
+    </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>You can reach us at <a href="mailto:spaceandtech@example.com">spaceandtech@example.com</a></p>
+    <p>Email us at <a href="mailto:spaceandtech@school.edu">spaceandtech@school.edu</a></p>
   </section>
-</main>
 
-<script src="scripts.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Space and Tech. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
+
 
