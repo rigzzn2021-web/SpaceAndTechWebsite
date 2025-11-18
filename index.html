@@ -1,85 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space and Tech Internship</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* General */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0a0a23;
+  color: #fff;
+}
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Space and Tech</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#activities">Activities</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#reflection">Reflection</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+a {
+  color: #f0a500;
+  text-decoration: none;
+}
 
-  <!-- Home Section -->
-  <section id="home" class="home-section">
-    <h1>Welcome to Space and Tech</h1>
-    <p>Exploring astronomy and technology through practical experiences</p>
-  </section>
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1a1c4f;
+  position: sticky;
+  top: 0;
+}
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a group of students passionate about space and technology. Our school activity involves practical experiences like star gazing sessions and participating in international conferences.</p>
-    <div class="group-photo">
-      <img src="group-placeholder.jpg" alt="Group Photo">
-    </div>
-  </section>
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
 
-  <!-- Activities Section -->
-  <section id="activities">
-    <h2>Our Activities</h2>
-    <div class="activity">
-      <h3>Star Gazing Sessions</h3>
-      <p>We conducted regular star gazing sessions to learn about constellations, planets, and astronomical phenomena.</p>
-      <img src="stargazing-placeholder.jpg" alt="Star Gazing">
-    </div>
-    <div class="activity">
-      <h3>Conference Presentation</h3>
-      <p>We presented our video in an international conference in Australia.</p>
-      <video controls>
-        <source src="conference-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
+.nav-links li a:hover {
+  color: #ffcc00;
+}
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="photo1.jpg" alt="Gallery Image 1">
-      <img src="photo2.jpg" alt="Gallery Image 2">
-      <img src="photo3.jpg" alt="Gallery Image 3">
-    </div>
-  </section>
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
-  <!-- Reflection Section -->
-  <section id="reflection">
-    <h2>Reflection & Learning</h2>
-    <p>Through this internship, we learned teamwork, astronomy skills, video production, and presentation techniques. It was an enriching experience that deepened our passion for space and technology.</p>
-  </section>
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach us at <a href="mailto:spaceandtech@school.edu">spaceandtech@school.edu</a></p>
-  </section>
+/* Home */
+.home-section {
+  background: url('images/stars-background.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Space and Tech. All Rights Reserved.</p>
-  </footer>
+/* Images */
+img, video {
+  max-width: 80%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
 
-</body>
-</html>
+/* Gallery Grid */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1c4f;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .gallery-grid {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
